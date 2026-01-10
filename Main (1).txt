@@ -1441,7 +1441,7 @@ function redzlib:MakeWindow(Configs)
         Position = UDim2.new(0, 0, 0, 0),
         BackgroundTransparency = 1,
         Image = "rbxassetid://109483113001531", 
-        ImageTransparency = 0.2,
+        ImageTransparency = 0,
         ScaleType = Enum.ScaleType.Crop,
         ZIndex = 0
     })
