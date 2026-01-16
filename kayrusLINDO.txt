@@ -1,5 +1,4 @@
---Minha Versão única - Magnus Modificações 
---Ser tive outro igual, e meu ramake rsrsrs
+
 local MarketplaceService = game:GetService("MarketplaceService")
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -36,14 +35,14 @@ Dark = {
 	["Color Text"] = Color3.fromRGB(255, 255, 255),
 	["Color Dark Text"] = Color3.fromRGB(255, 255, 0)
 },
-Blue = {
+DarkLite = {
 	["Color Hub 1"] = ColorSequence.new({
 		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)),
 		ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 0, 0)),
 		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))
 	}),
 	["Color Hub 2"] = Color3.fromRGB(0, 0, 0),
-	["Color Stroke"] = Color3.fromRGB(90, 30, 140),
+	["Color Stroke"] = Color3.fromRGB(255, 255, 255),
 	["Color Theme"] = Color3.fromRGB(255, 255, 255),
 	["Color Text"] = Color3.fromRGB(255, 255, 255),
 	["Color Dark Text"] = Color3.fromRGB(255, 255, 255),
@@ -56,7 +55,7 @@ Blue = {
 	Save = {
 		UISize = {550, 380},
 		TabSize = 160,
-		Theme = "Blue"
+		Theme = "DarkLite"
 	},
 	Settings = {},
 	Connection = {},
@@ -1203,7 +1202,7 @@ end
 
 AddEle("Corner", function(parent, CornerRadius)
 	local New = SetProps(Create("UICorner", parent, {
-		CornerRadius = CornerRadius or UDim.new(0, 7)
+		CornerRadius = CornerRadius or UDim.new(0, 6)
 	}), props)
 	return New
 end)
@@ -1846,12 +1845,12 @@ function redzlib:MakeWindow(Configs)
 	function Window:CloseBtn()
 		local Dialog = Window:Dialog({
 			Title = "Close",
-			Text = "Deseja realmente fechar o Lyra Hub? Ele contém recursos essenciais e fechar agora pode interromper funções importantes, causar falhas ou perder suas configurações. Cuidado antes de prosseguir!",
+			Text = "Deseja realmente fechar o Moon Hub? Ele contém recursos essenciais e fechar agora pode interromper funções importantes, causar falhas ou perder suas configurações. Cuidado antes de prosseguir!",
 			Options = {
-				{"Confirm", function()
+				{"Confirmar", function()
 					ScreenGui:Destroy()
 				end},
-				{"Cancel"}
+				{"Cancelar"}
 			}
 		})
 	end
